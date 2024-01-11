@@ -23,7 +23,13 @@ object Main {
     val sorter = new Sorter()
     val sortedList = sorter.sortByLength(list)
 
-    sortedList.foreach( (s:String) => { println("%d: %s".format(s.length, s))} )
+    printWithLength(sortedList)
+  }
+
+  private def printWithLength(list: List[String]): Unit = {
+    list.foreach((s: String) => {
+      println("%d: %s".format(s.length, s))
+    })
   }
 }
 
